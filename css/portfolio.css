@@ -107,15 +107,16 @@ nav li {
 
 .details {
     color: #757575;
-    width: 585px;
+    /* width: 585px; */
+    width: 75%;
     font-weight: 400;
     font-size: 18px;
     margin-top: 15px;
 }
 
 .banner-photo {
-    width: 584px;
-    height: 676px;
+    width: 100%;
+    height: 100%;
     left: 978px;
     top: 161px;
     margin-left: 160px;
@@ -350,15 +351,74 @@ outline: none;
 /* Responsive Styles */
 /* smaller device (phones) */
 @media screen and (max-width: 576px) {
-    .skills-container, .resume-content, .contact, .about-info-container {
+    body {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .header {
+        background-image: none;
+    }
+
+    .skills-container, 
+    .resume-content, 
+    .contact, 
+    .about-info-container {
         flex-direction: column;
         gap: 20px;
         align-items: center;
         padding: 10px 20px;
     }
+    
+    /* responsive header section */
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        margin-left: 0;
+        padding: 10px 20px;
+    }
 
-    .about, .skills {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .btn-primary {
+        margin: 10px 0;
+    }
+
+    /* responsive banner section */
+    .banner {
+        display: block;
+        gap: 10px;
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .title {
+        font-size: 65px;
+    }
+
+    .banner-photo {
+        width: 75%;
+        margin-left: 0;
+    }
+    .banner-desc {
+        margin-left: 0;
+    }
+    
+    .banner, .about, .skills {
         padding: 20px;
+    }
+
+    .btn-primary {
+        width: 120px;
+        height: 62px;
+        font-weight: 700;
+        margin-bottom: 7px;
+    }
+
+    .btn-primary3 {
+       margin-top: 15px;
     }
 }
 
@@ -368,6 +428,32 @@ outline: none;
         max-width: 86%;
         margin: 0 auto;
     }
+    .banner {
+        flex-direction: column;
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    nav {
+        gap: 10px;
+        margin-left: 0;
+        padding: 0;
+    }
+
+    .header {
+        background-image: none;
+    }
+      
+    .banner-desc {
+        margin-left: 0;
+    }
+
+    .banner-photo {
+        width: 85%;
+        margin-left: 0;
+        margin-right: 20px;
+    }
+
     .skills-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
