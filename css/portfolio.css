@@ -4,6 +4,7 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+
 .text-primary {
     color: #FD6E0A;
 }
@@ -301,10 +302,11 @@ hr {
 
 .contact-description {
     font-weight: 400;
-    width: 562px;
-    height: 56px;
+    /* width: 562px;
+    height: 56px; */
     font-size: 16px;
     color: #474747;
+    margin-bottom: 15px;
 }
 
 .contact input, textarea {
@@ -312,7 +314,7 @@ hr {
 }
 
 .contact .input-name{
-    width: 461px;
+    /* width: 461px; */
     font-weight: 400;
     font-size: 16px;
     color: #757575;
@@ -320,8 +322,8 @@ hr {
 }
 
 .contact .text-area {
-    width: 461px;
-    height: 150px;
+    /* width: 461px;
+    height: 150px; */
     font-weight: 400;
     font-size: 16px;
     line-height: 28px;
@@ -342,4 +344,51 @@ outline: none;
 .contact a {
     text-decoration: none;
     padding-right: 10px;
+}
+
+
+/* Responsive Styles */
+/* smaller device (phones) */
+@media screen and (max-width: 576px) {
+    .skills-container, .resume-content, .contact, .about-info-container {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .about, .skills {
+        padding: 20px;
+    }
+}
+
+/* medium device (tablet) */
+@media screen and (min-width: 677px) and (max-width: 992px) {
+    body {
+        max-width: 86%;
+        margin: 0 auto;
+    }
+    .skills-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 15px;
+    }
+
+    .resume-content {
+        padding: 15px;
+    }
+
+    .contact {
+      gap: 20px;  
+      padding: 14px;
+    }
+
+    .about, .skills {
+        padding: 25px;
+    }
+}
+
+
+.hide {
+    display: none;
 }
